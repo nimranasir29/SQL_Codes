@@ -1,0 +1,21 @@
+CREATE TABLE LAB_3(
+O_Id int ,
+OrderDate varchar(30),
+OrderPrice int , 
+Customer varchar(30)) 
+ 
+INSERT INTO  LAB_3 VALUES(1, '2008-11-12', 1000, 'Hansen');
+INSERT INTO  LAB_3 VALUES(2, '2008-10-23', 1600, 'Nilsen'); 
+INSERT INTO  LAB_3 VALUES(3, '2008-09-02', 700, 'Hansen');
+INSERT INTO  LAB_3 VALUES(4, '2008-09-03', 300, 'Hansen');
+INSERT INTO  LAB_3 VALUES(5, '2008-08-30', 2000, 'Jensen'); 
+INSERT INTO  LAB_3 VALUES(6, '2008-10-04', 100, 'Nilsen'); 
+
+select * from LAB_3
+
+SELECT AVG(OrderPrice) AS OrderAverage FROM LAB_3
+
+SELECT Customer,SUM(OrderPrice) AS TotalSum FROM LAB_3 
+GROUP BY Customer;
+
+DELETE  FROM LAB_3
